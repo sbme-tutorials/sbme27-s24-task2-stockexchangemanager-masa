@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="480.0" stylesheets="@Mazen.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.CreateNewStocksController">
+   <Button fx:id="create" layoutX="102.0" layoutY="240.0" mnemonicParsing="false" onAction="#Create" styleClass="newadmin-but" stylesheets="@Mazen.css" text="Create" />
+   <Button fx:id="cancel" layoutX="288.0" layoutY="240.0" mnemonicParsing="false" onAction="#Cancel" styleClass="newadmin-but" stylesheets="@Mazen.css" text="Cancel" />
+   <Label layoutX="72.0" layoutY="130.0" styleClass="changing-text" stylesheets="@Mazen.css" text="Company Symbol:">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="75.0" layoutY="177.0" styleClass="changing-text" stylesheets="@Mazen.css" text="Stock Price:">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <TextField fx:id="CompanySymbol" layoutX="257.0" layoutY="130.0" styleClass="fields" stylesheets="@Mazen.css" />
+   <TextField fx:id="StockPrice" layoutX="257.0" layoutY="177.0" styleClass="fields" stylesheets="@Mazen.css" />
+   <ToolBar layoutX="5.0" layoutY="4.0" prefHeight="52.0" prefWidth="600.0" styleClass="login_toolbar" stylesheets="@Mazen.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   <Label layoutX="133.0" layoutY="14.0" styleClass="changing-head" stylesheets="@Mazen.css" text="Create New Stocks">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+</AnchorPane>

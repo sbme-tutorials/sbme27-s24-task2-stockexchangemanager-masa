@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="480.0" stylesheets="@Mazen.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Normal_User_Scene">
+    <children>
+      <ToolBar layoutX="6.0" layoutY="25.0" prefHeight="34.0" prefWidth="588.0" styleClass="login_toolbar" stylesheets="@Mazen.css" AnchorPane.bottomAnchor="317.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Label layoutX="153.0" layoutY="21.0" styleClass="newadmin-head" stylesheets="@Mazen.css" text="Normal User Scene">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="25.0" layoutY="17.0" mnemonicParsing="false" onAction="#AfterCancel" styleClass="exit-but" stylesheets="@Mazen.css" text="Exit">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Button layoutX="320.0" layoutY="210.0" mnemonicParsing="false" onAction="#changeToMarket" styleClass="about-but" stylesheets="@Mazen.css" text="Market">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="62.0" layoutY="142.0" mnemonicParsing="false" onAction="#changeToAccount" styleClass="about-but" stylesheets="@Mazen.css" text="My Account" AnchorPane.bottomAnchor="208.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="211.0" layoutY="83.0" styleClass="text" stylesheets="@Mazen.css" text="My Actions" />
+      <Button layoutX="317.0" layoutY="287.0" mnemonicParsing="false" onAction="#changeName" stylesheets="@Mazen.css" text="Change User Name" />
+      <Button layoutX="55.0" layoutY="288.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="26.0" prefWidth="135.0" styleClass="big-but" stylesheets="@Mazen.css" text="Change Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="62.0" layoutY="210.0" mnemonicParsing="false" onAction="#JoinSession" styleClass="about-but" stylesheets="@Mazen.css" text="Join Session" />
+      <Button fx:id="bePremium" layoutX="327.0" layoutY="138.0" mnemonicParsing="false" onAction="#bePremium" text="be premium 10$" />
+      <Label fx:id="LabelField" layoutX="97.0" layoutY="107.0" text="you are now subscribed 10$ taken from your balance" />
+    </children>
+</AnchorPane>

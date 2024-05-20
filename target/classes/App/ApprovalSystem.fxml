@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Mazen.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.ApprovalSystemController">
+   <ToolBar layoutX="6.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="588.0" style="-fx-background-color: #003448;">
+      <Button fx:id="back" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #a34fd8;" styleClass="orders-but" stylesheets="@Mazen.css" text="Back" textFill="WHITE" />
+      <Button fx:id="approve" mnemonicParsing="false" onAction="#Approve" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: GREEN;" styleClass="orders-but" stylesheets="@Mazen.css" text="Approve" textFill="WHITE" />
+   </ToolBar>
+   <TitledPane fx:id="viewProfile" layoutX="387.0" layoutY="76.0" prefHeight="174.0" prefWidth="173.0" stylesheets="@Mazen.css" text="View Profile">
+      <AnchorPane styleClass="profile" stylesheets="@Mazen.css">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <ToolBar layoutX="5.0" layoutY="78.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #763626;" />
+         <ToolBar layoutX="5.0" layoutY="51.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #763626;" />
+         <ToolBar layoutX="5.0" layoutY="21.0" prefHeight="20.0" prefWidth="64.0" style="-fx-background-color: #763626;" />
+         <Label fx:id="adminID" layoutX="75.0" layoutY="81.0" text="adminID" />
+         <SplitMenuButton layoutX="11.0" layoutY="117.0" mnemonicParsing="false" text="Edit Profile">
+            <items>
+               <MenuItem fx:id="changeName" mnemonicParsing="false" onAction="#ChangeName" text="Change Username" />
+               <MenuItem fx:id="changePassword" mnemonicParsing="false" onAction="#ChangePassword" text="Change Password" />
+            </items>
+         </SplitMenuButton>
+         <Label fx:id="username" layoutX="77.0" layoutY="23.0" text="username" />
+         <Text fill="#e3867d" layoutX="10.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Admin ID:" />
+         <Text fill="#e3867d" layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Admin" />
+         <Text fill="#e3867d" layoutX="15.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Name:" wrappingWidth="40.6796875" />
+      </AnchorPane>
+   </TitledPane>
+   <Button fx:id="reject" layoutX="161.0" layoutY="26.0" mnemonicParsing="false" onAction="#Reject" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: RED;" styleClass="orders-but" stylesheets="@Mazen.css" text="Reject" textFill="#ab1c1c" />
+   <Text fill="WHITE" layoutX="276.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="changing-head" text="Orders">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Text>
+   <Text fill="#640880" layoutX="78.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="changing-text" text="Pending Transaction">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Text>
+   <TableView fx:id="orders" editable="true" layoutX="56.0" layoutY="126.0" prefHeight="234.0" prefWidth="291.0">
+      <columns>
+         <TableColumn fx:id="usernameList" prefWidth="138.4000244140625" text="User" />
+         <TableColumn fx:id="type" prefWidth="84.0" text="Request Type" />
+         <TableColumn fx:id="amount" prefWidth="67.199951171875" text="Amount" />
+      </columns>
+   </TableView>
+</AnchorPane>

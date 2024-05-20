@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="657.0" stylesheets="@Mazen.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.OrderController">
+   <children>
+      <ToolBar layoutX="-3.0" layoutY="9.0" prefHeight="40.0" prefWidth="664.0" styleClass="order-toolbar" stylesheets="@Mazen.css" AnchorPane.bottomAnchor="410.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="tableViewOrders" layoutX="17.0" layoutY="119.0" prefHeight="242.0" prefWidth="390.0" styleClass="orderlist" stylesheets="@Mazen.css">
+        <columns>
+          <TableColumn fx:id="orderTypeColumn" prefWidth="75.0" styleClass="tablecolumn" text="Type" />
+          <TableColumn fx:id="companySymbolColumn" prefWidth="75.0" styleClass="tablecolumn" text="Symbol" />
+            <TableColumn fx:id="numberOfOrderedStocksColumn" prefWidth="95.19993591308594" styleClass="tablecolumn" text="No. Of Stocks" />
+            <TableColumn fx:id="amountDepositedOrWithdrawnColumn" prefWidth="69.60003662109375" styleClass="tablecolumn" text="Amount" />
+            <TableColumn fx:id="currentOrderStateColumn" prefWidth="72.00006103515625" styleClass="tablecolumn" text="State" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableViewOwnedAssets" layoutX="447.0" layoutY="118.0" prefHeight="242.0" prefWidth="200.0" styleClass="orderlist" stylesheets="@Mazen.css">
+        <columns>
+          <TableColumn fx:id="ownedCompanySymbolColumn" prefWidth="91.20001220703125" styleClass="tablecolumn" text="Symbol" />
+          <TableColumn fx:id="numberOfOwnedStocksColumn" prefWidth="107.99993896484375" styleClass="tablecolumn" text="No. Of Stocks" />
+        </columns>
+      </TableView>
+      <Label layoutX="281.0" layoutY="21.0" styleClass="changing-head" stylesheets="@Mazen.css" text="Order ">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="470.0" layoutY="88.0" style="-fx-text-fill: #763626; -fx-font-size: 20px;" styleClass="changing-head" stylesheets="@Mazen.css" text="Owned Assets" />
+      <Label layoutX="130.0" layoutY="80.0" style="-fx-text-fill: #763626;" styleClass="changing-head" stylesheets="@Mazen.css" text="Order History" />
+      <Button layoutX="37.0" layoutY="21.0" mnemonicParsing="false" onAction="#setPreviousScene" styleClass="exit-but" stylesheets="@Mazen.css" text="Back" />
+   </children>
+</AnchorPane>
