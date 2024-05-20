@@ -5,12 +5,7 @@ Welcome to our Stocks Exchange Manager, a platform for traders to buy and sell s
 
 ## Installation
 
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
+Go to and run "src/main/java/App/HelloApplication.java"
     
 ## Features
 
