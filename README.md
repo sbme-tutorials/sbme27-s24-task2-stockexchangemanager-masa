@@ -6,6 +6,8 @@ Welcome to our Stocks Exchange Manager, a platform for traders to buy and sell s
 ## Installation
 
 Go to and run "src/main/java/App/HelloApplication.java"
+
+The default admin account username is "mazenmazen", password "mazenmazen"
     
 ## Features
 
